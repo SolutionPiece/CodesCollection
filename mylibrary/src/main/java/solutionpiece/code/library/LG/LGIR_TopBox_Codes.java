@@ -2,12 +2,12 @@ package solutionpiece.code.library.LG;
 
 public class LGIR_TopBox_Codes {
 
-    String poweronoff_settopbox, mute_settopbox, btn1_settopbox, btn2_settopbox, btn3_settopbox, btn4_settopbox, btn5_settopbox, btn6_settopbox, btn7_settopbox, btn8_settopbox, btn9_settopbox, btn0_settopbox, audio_settopbox, menu_settopbox, format_settopbox,
+    public String poweronoff_settopbox, mute_settopbox, btn1_settopbox, btn2_settopbox, btn3_settopbox, btn4_settopbox, btn5_settopbox, btn6_settopbox, btn7_settopbox, btn8_settopbox, btn9_settopbox, btn0_settopbox, audio_settopbox, menu_settopbox, format_settopbox,
     previouschnl_settopbox, cc_settopbox, okleft_settopbox, okright_settopbox, okup_settopbox, okdown_settopbox, ok_settopbox,
     index_settopbox, exit_settopbox, info_settopbox, guide_settopbox, blue_settopbox, red_settopbox, green_settopbox, yellow_settopbox;
 
-    String arc_settopbox, cancel_settopbox, list_settopbox, reveal_settopbox, mix_settopbox, subpage_settopbox, text_settopbox, signal_settopbox;
-    String favourite_settopbox, freeze_settopbox;
+    public String arc_settopbox, cancel_settopbox, list_settopbox, reveal_settopbox, mix_settopbox, subpage_settopbox, text_settopbox, signal_settopbox;
+    public String favourite_settopbox, freeze_settopbox;
 
 
     public void FirstFunction1()

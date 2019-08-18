@@ -2,7 +2,7 @@ package solutionpiece.code.library.LG;
 
 public class LGIR_DVD_Codes {
 
-    String poweroff_dvd, repeatab_dvd, audio_dvd, search_dvd, btn1_dvd, btn2_dvd, btn3_dvd, btn4_dvd, btn5_dvd, btn6_dvd, btn7_dvd, btn8_dvd, btn9_dvd, btn0_dvd, menusetup_dvd, title_dvd, openclose_dvd, subtitle_dvd, angle_dvd, return_dvd, resolution_dvd, rewind_dvd, back_dvd, pause_dvd, play_dvd, next_dvd, fastfrwrd_dvd, okup_dvd, okdown_dvd, okleft_dvd, okright_dvd, ok_dvdcombo, menu_dvd, display_dvd, repeat_dvd, stop_dvd, program_dvd, random_dvd, poweron_dvd, poweronoff_dvd, zoom_dvd, clear_dvd, red_bluray, yellow_bluray;
+    public String poweroff_dvd, repeatab_dvd, audio_dvd, search_dvd, btn1_dvd, btn2_dvd, btn3_dvd, btn4_dvd, btn5_dvd, btn6_dvd, btn7_dvd, btn8_dvd, btn9_dvd, btn0_dvd, menusetup_dvd, title_dvd, openclose_dvd, subtitle_dvd, angle_dvd, return_dvd, resolution_dvd, rewind_dvd, back_dvd, pause_dvd, play_dvd, next_dvd, fastfrwrd_dvd, okup_dvd, okdown_dvd, okleft_dvd, okright_dvd, ok_dvdcombo, menu_dvd, display_dvd, repeat_dvd, stop_dvd, program_dvd, random_dvd, poweron_dvd, poweronoff_dvd, zoom_dvd, clear_dvd, red_bluray, yellow_bluray;
 
     public void FirstFunction()
     {
