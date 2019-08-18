@@ -44,7 +44,7 @@ public class InfoActivity extends AppCompatActivity {
                 }
                 catch (Exception ex)
                 {
-                    FunctionCollection.DisplayCustomizeToast(InfoActivity.this, ex.toString(),0,7,true);
+                    FunctionCollection.DisplayCustomizeToast(InfoActivity.this, ex.toString(),0,6,true);
                     return;
                 }
             }
