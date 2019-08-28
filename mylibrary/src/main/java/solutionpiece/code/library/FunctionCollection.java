@@ -173,7 +173,6 @@ public class FunctionCollection {
 
     public static void DisplayCustomizeToast(Context context, String message, int colour_back_pos, int colour_text_pos, boolean isLong) {
 
-
         String[] arrayColors = {color_samsung, color_orange, color_blue, color_green, color_dark_blue, color_red, color_white};
         View layoutValue = LayoutInflater.from(context).inflate(R.layout.toast_layout, null);
         CardView background = (CardView) layoutValue.findViewById(R.id.custom_toast_layout_id);
@@ -225,7 +224,7 @@ public class FunctionCollection {
         try {
             Intent intent = new Intent(Intent.ACTION_VIEW);
             intent.setType("text/plain");
-            Uri data = Uri.parse("mailto:?subject=" + "Remote App" + "&body=" + message + "&to=" + "solutionpieceteam@gmail.com");
+            Uri data = Uri.parse("mailto:?subject=" + context.getResources().getString(R.string.app_name) + "&body=" + message + "&to=" + "solutionpieceteam@gmail.com");
             intent.setData(data);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
@@ -240,13 +239,6 @@ public class FunctionCollection {
     public String getEmojiByUnicode(int unicode){
         return new String(Character.toChars(unicode));
     }
-
-
-
-
-
-
-
 
 
     // Custom method to convert string to url
