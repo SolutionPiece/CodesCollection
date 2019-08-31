@@ -9,13 +9,15 @@ import com.google.firebase.database.IgnoreExtraProperties;
 public class UpdateModal
 {
     String update_status;
-    String version_code;
+    String version_app_code;
+    String version_update_code;
     String info_date;
     String info_day;
 
-    public UpdateModal(String update_status, String version_code, String info_date, String info_day) {
+    public UpdateModal(String update_status, String version_app_code, String version_update_code, String info_date, String info_day) {
         this.update_status = update_status;
-        this.version_code = version_code;
+        this.version_app_code = version_app_code;
+        this.version_update_code = version_update_code;
         this.info_date = info_date;
         this.info_day = info_day;
     }
@@ -28,12 +30,20 @@ public class UpdateModal
         this.update_status = update_status;
     }
 
-    public String getVersion_code() {
-        return version_code;
+    public String getVersion_app_code() {
+        return version_app_code;
     }
 
-    public void setVersion_code(String version_code) {
-        this.version_code = version_code;
+    public void setVersion_app_code(String version_app_code) {
+        this.version_app_code = version_app_code;
+    }
+
+    public String getVersion_update_code() {
+        return version_update_code;
+    }
+
+    public void setVersion_update_code(String version_update_code) {
+        this.version_update_code = version_update_code;
     }
 
     public String getInfo_date() {
