@@ -234,9 +234,6 @@ public class FunctionCollection {
         }
     }
 
-    public String getEmojiByUnicode(int unicode){
-        return new String(Character.toChars(unicode));
-    }
 
 
     // Custom method to convert string to url
@@ -267,7 +264,22 @@ public class FunctionCollection {
         context.getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
     }
 
+    public void AssigningValuToClour()
+    {
+        color_samsung = context.getResources().getString(R.string.color_samsung);
+        color_orange = context.getResources().getString(R.string.color_orange);
+        color_blue = context.getResources().getString(R.string.color_blue);
+        color_green = context.getResources().getString(R.string.color_green);
+        color_dark_blue = context.getResources().getString(R.string.color_dark_blue);
+        color_red = context.getResources().getString(R.string.color_red);
+        color_white = context.getResources().getString(R.string.color_white);
+    }
+
     //============= New Code ===============================================
+
+    public String getEmojiByUnicode(int unicode){
+        return new String(Character.toChars(unicode));
+    }
 
     public String getCurrentTime()
     {
@@ -285,18 +297,6 @@ public class FunctionCollection {
     {
         String date = date_format.format(current_date);
         return date;
-    }
-
-
-    public void AssigningValuToClour()
-    {
-        color_samsung = context.getResources().getString(R.string.color_samsung);
-        color_orange = context.getResources().getString(R.string.color_orange);
-        color_blue = context.getResources().getString(R.string.color_blue);
-        color_green = context.getResources().getString(R.string.color_green);
-        color_dark_blue = context.getResources().getString(R.string.color_dark_blue);
-        color_red = context.getResources().getString(R.string.color_red);
-        color_white = context.getResources().getString(R.string.color_white);
     }
 
 
