@@ -2,6 +2,11 @@ package solutionpiece.code.library.LG;
 
 public class LGIR_DVD_Codes {
 
+    public int[] pattern = {1901, 4453, 625, 1614, 625, 1588, 625, 1614, 625, 442, 625, 442, 625, 468, 625, 442, 625, 494, 572, 1614, 625, 1588, 625, 1614, 625, 494, 572, 442, 651, 442, 625, 442, 625, 442,
+            625, 1614, 625, 1588, 651, 1588, 625, 442, 625, 494, 598, 442, 625, 442, 625, 520, 572, 442, 625, 442, 625, 442, 651, 1588, 625, 1614, 625, 1588, 625, 1614, 625, 1588, 625, 48958};
+
+    public int transmit_pattern = 138400;
+
     public String poweroff_dvd, repeatab_dvd, audio_dvd, search_dvd, btn1_dvd, btn2_dvd, btn3_dvd, btn4_dvd, btn5_dvd, btn6_dvd, btn7_dvd, btn8_dvd, btn9_dvd, btn0_dvd, menusetup_dvd, title_dvd, openclose_dvd, subtitle_dvd, angle_dvd, return_dvd, resolution_dvd, rewind_dvd, back_dvd, pause_dvd, play_dvd, next_dvd, fastfrwrd_dvd, okup_dvd, okdown_dvd, okleft_dvd, okright_dvd, ok_dvdcombo, menu_dvd, display_dvd, repeat_dvd, stop_dvd, program_dvd, random_dvd, poweron_dvd, poweronoff_dvd, zoom_dvd, clear_dvd, red_bluray, yellow_bluray;
 
     public void FirstFunction()

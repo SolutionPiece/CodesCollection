@@ -13,6 +13,8 @@ import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Build;
 import android.provider.MediaStore;
+import android.provider.Settings;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -25,26 +27,26 @@ import androidx.cardview.widget.CardView;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class FunctionCollection {
 
     private static Context context;
-    SimpleDateFormat dateFormat;
-
+    SimpleDateFormat time_format, date_format, day_format;
+    Date current_date;
     static String color_samsung, color_orange, color_blue, color_green, color_dark_blue, color_red, color_white;
 
     public FunctionCollection(Context context) {
         this.context = context;
 
-        dateFormat = new SimpleDateFormat("HH:mm");
-        color_samsung = context.getResources().getString(R.string.color_samsung);
-        color_orange = context.getResources().getString(R.string.color_orange);
-        color_blue = context.getResources().getString(R.string.color_blue);
-        color_green = context.getResources().getString(R.string.color_green);
-        color_dark_blue = context.getResources().getString(R.string.color_dark_blue);
-        color_red = context.getResources().getString(R.string.color_red);
-        color_white = context.getResources().getString(R.string.color_white);
+        time_format = new SimpleDateFormat("HH:mm");
+        day_format = new SimpleDateFormat("EEEE");
+        date_format = new SimpleDateFormat("dd/MMM/yyyy");
+        current_date= new Date();
+
+        AssigningValuToClour();
     }
 
 
@@ -64,6 +66,7 @@ public class FunctionCollection {
             context.startActivity(Intent.createChooser(shareIntent, "share"));
         }
     }
+
 
     public void MoreAppsClick()
     {
@@ -197,11 +200,6 @@ public class FunctionCollection {
         }
     }
 
-
-
-
-
-
     public void ShareFunctionFinal(String resource_url) {
         Uri URI = Uri.parse(resource_url);
         Intent emailIntent = new Intent(Intent.ACTION_SEND);
@@ -269,7 +267,109 @@ public class FunctionCollection {
         context.getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
     }
 
+    //============= New Code ===============================================
 
+    public String getCurrentTime()
+    {
+        String time = time_format.format(current_date);
+        return time;
+    }
+
+    public String getCurrentDay()
+    {
+        String day = day_format.format(current_date);
+        return day;
+    }
+
+    public String getCurrentDate()
+    {
+        String date = date_format.format(current_date);
+        return date;
+    }
+
+
+    public void AssigningValuToClour()
+    {
+        color_samsung = context.getResources().getString(R.string.color_samsung);
+        color_orange = context.getResources().getString(R.string.color_orange);
+        color_blue = context.getResources().getString(R.string.color_blue);
+        color_green = context.getResources().getString(R.string.color_green);
+        color_dark_blue = context.getResources().getString(R.string.color_dark_blue);
+        color_red = context.getResources().getString(R.string.color_red);
+        color_white = context.getResources().getString(R.string.color_white);
+    }
+
+
+    public String getUniqueDeviceID()
+    {
+        String manufacturer = Build.MANUFACTURER;
+        String model = Build.MODEL;
+        String androidID = Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ANDROID_ID);
+        if (model.startsWith(manufacturer)) {
+            return capitalize(model);
+        }
+        return capitalize(manufacturer) + "-" + model+ "-" + androidID;
+    }
+
+    private String capitalize(String str) {
+        if (TextUtils.isEmpty(str)) {
+            return str;
+        }
+        char[] arr = str.toCharArray();
+        boolean capitalizeNext = true;
+
+        StringBuilder phrase = new StringBuilder();
+        for (char c : arr) {
+            if (capitalizeNext && Character.isLetter(c)) {
+                phrase.append(Character.toUpperCase(c));
+                capitalizeNext = false;
+                continue;
+            } else if (Character.isWhitespace(c)) {
+                capitalizeNext = true;
+            }
+            phrase.append(c);
+        }
+
+        return phrase.toString();
+    }
+
+
+    public String getTimeFormate(String time)
+    {
+        String format;
+        String[] fullString = time.split(":");
+        int hour = Integer.parseInt(fullString[0]);
+
+        String min = fullString[1];
+        String[] fullString2 = min.split(" ");
+        int minute = Integer.parseInt(fullString2[0]);
+
+        if (hour == 0) {
+            hour += 12;
+            format = "AM";
+        } else if (hour == 12) {
+            hour = 12;
+            format = "PM";
+        } else if (hour > 12) {
+            hour -= 12;
+            format = "PM";
+        } else {
+            format = "AM";
+        }
+
+        String correctTime = getFirstDigitFormate(hour) + ":" + getFirstDigitFormate(minute) +" "+format;
+        return  correctTime;
+    }
+
+
+    public String getFirstDigitFormate(int number) {
+        return number <= 9 ? "0" + number : String.valueOf(number);
+    }
+
+    public String getCurrencyFormat(String amount) {
+        DecimalFormat formatter = new DecimalFormat("###,###,##0");
+        return formatter.format(Double.parseDouble(amount));
+    }
 
 
 }

@@ -2,6 +2,11 @@ package solutionpiece.code.library.LG;
 
 public class LGIR_Air_Conditionar_Codes {
 
+    public int[] pattern = {1901, 4453, 625, 1614, 625, 1588, 625, 1614, 625, 442, 625, 442, 625, 468, 625, 442, 625, 494, 572, 1614, 625, 1588, 625, 1614, 625, 494, 572, 442, 651, 442, 625, 442, 625, 442,
+            625, 1614, 625, 1588, 651, 1588, 625, 442, 625, 494, 598, 442, 625, 442, 625, 520, 572, 442, 625, 442, 625, 442, 651, 1588, 625, 1614, 625, 1588, 625, 1614, 625, 1588, 625, 48958};
+
+    public int transmit_pattern = 138400;
+
     public String code_power, code_cf, code_swing;
     public String code_temp_up, code_temp_down;
     public String code_fan_up, code_fan_down;

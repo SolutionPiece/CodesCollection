@@ -2,6 +2,11 @@ package solutionpiece.code.library.Samsung;
 
 public class SAMIR_TV_Codes {
 
+    public int[] pattern = {1901, 4453, 625, 1614, 625, 1588, 625, 1614, 625, 442, 625, 442, 625, 468, 625, 442, 625, 494, 572, 1614, 625, 1588, 625, 1614, 625, 494, 572, 442, 651, 442, 625, 442, 625, 442,
+            625, 1614, 625, 1588, 651, 1588, 625, 442, 625, 494, 598, 442, 625, 442, 625, 520, 572, 442, 625, 442, 625, 442, 651, 1588, 625, 1614, 625, 1588, 625, 1614, 625, 1588, 625, 48958};
+
+    public int transmit_pattern = 138400;
+
     public String button_power, button_exit, button_menu, button_enter, button_info, button_cancel, button_display, button_last, button_return;
     public String button_0, button_1, button_2, button_3, button_3D, button_4, button_5, button_6, button_7, button_8, button_9;
     public String button_channel_list, button_channel_plus, button_channel_minus;

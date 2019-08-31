@@ -2,6 +2,11 @@ package solutionpiece.code.library.LG;
 
 public class LGIR_ABSystem_Codes {
 
+    public int[] pattern = {1901, 4453, 625, 1614, 625, 1588, 625, 1614, 625, 442, 625, 442, 625, 468, 625, 442, 625, 494, 572, 1614, 625, 1588, 625, 1614, 625, 494, 572, 442, 651, 442, 625, 442, 625, 442,
+            625, 1614, 625, 1588, 651, 1588, 625, 442, 625, 494, 598, 442, 625, 442, 625, 520, 572, 442, 625, 442, 625, 442, 651, 1588, 625, 1614, 625, 1588, 625, 1614, 625, 1588, 625, 48958};
+
+    public int transmit_pattern = 138400;
+
   /*  String poweronoff_avsystem
     mute_avsystem
             audiodj_avsystem

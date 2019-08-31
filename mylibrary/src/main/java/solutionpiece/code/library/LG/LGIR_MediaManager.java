@@ -2,6 +2,10 @@ package solutionpiece.code.library.LG;
 
 public class LGIR_MediaManager {
 
+    public int[] pattern = {1901, 4453, 625, 1614, 625, 1588, 625, 1614, 625, 442, 625, 442, 625, 468, 625, 442, 625, 494, 572, 1614, 625, 1588, 625, 1614, 625, 494, 572, 442, 651, 442, 625, 442, 625, 442,
+            625, 1614, 625, 1588, 651, 1588, 625, 442, 625, 494, 598, 442, 625, 442, 625, 520, 572, 442, 625, 442, 625, 442, 651, 1588, 625, 1614, 625, 1588, 625, 1614, 625, 1588, 625, 48958};
+
+    public int transmit_pattern = 138400;
 
     public String audio_code, poweronoff_code, mute_code, menu_code, repeat_code, stop_code;
     public String okup_code, okdown_code, okleft_code, okright_code, ok_code;

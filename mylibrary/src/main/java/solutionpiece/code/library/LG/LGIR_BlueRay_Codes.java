@@ -2,6 +2,11 @@ package solutionpiece.code.library.LG;
 
 public class LGIR_BlueRay_Codes {
 
+    public int[] pattern = {1901, 4453, 625, 1614, 625, 1588, 625, 1614, 625, 442, 625, 442, 625, 468, 625, 442, 625, 494, 572, 1614, 625, 1588, 625, 1614, 625, 494, 572, 442, 651, 442, 625, 442, 625, 442,
+            625, 1614, 625, 1588, 651, 1588, 625, 442, 625, 494, 598, 442, 625, 442, 625, 520, 572, 442, 625, 442, 625, 442, 651, 1588, 625, 1614, 625, 1588, 625, 1614, 625, 1588, 625, 48958};
+
+    public int transmit_pattern = 138400;
+
     public String poweronoff_bluray, audio_bluray, angle_bluray, btn1_bluray, btn2_bluray, btn3_bluray, btn4_bluray, btn5_bluray, btn6_bluray, btn7_bluray, btn8_bluray, btn9_bluray, btn0_bluray, menu_bluray, search_bluray, open_bluray, menuhome_bluray, previous_bluray, next_bluray, poweron_bluray, poweroff_bluray, stop_bluray, back_bluray, pause_bluray, play_bluray, nextmedia_bluray;
     public String clear_bluray, okup_bluray, okdown_bluray, okleft_bluray, okright_bluray, ok_bluray, menusetup_bluray, marker_bluray, musicid_bluray;
     public String resolution_bluray, return_bluray, zoom_bluray, title_bluray, subtitle_bluray, blue_bluray, green_bluray, red_bluray, yellow_bluray;
