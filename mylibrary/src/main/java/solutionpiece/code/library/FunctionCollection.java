@@ -51,7 +51,6 @@ public class FunctionCollection {
 
 
 
-
     public void ShareAppFunction() {
 
         Intent shareIntent = new Intent(Intent.ACTION_SEND);
